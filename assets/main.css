@@ -1,0 +1,68 @@
+*, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", "Heiti SC", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+}
+body {
+  font-size: 13px;
+}
+
+/*#Akashic .show-grid {
+	padding: 10px;
+}
+*/
+sunshine {
+  /*margin: 10px*/
+}
+sunshine nav ul {
+  display: flex;
+}
+sunshine nav ul li {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+sunshine nav ul li a {
+  text-align: center;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 0px;
+}
+
+sunshine select.form-control {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  height: 26px;
+}
+sunshine .container {
+	width: 100%; !important
+}
+
+.col-xs-2 .form-group {
+  margin-bottom: 0px;
+}
+.col-xs-2 .form-group .checkbox {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.akashic-table-pagination {
+  
+}
+
+#ECharts {
+  margin-top: 15px;
+}
+
+akashic-records .advancedmodule {
+  padding-top: 5px;
+}
