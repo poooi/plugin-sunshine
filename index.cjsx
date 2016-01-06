@@ -1,6 +1,18 @@
 remote = require 'remote'
 windowManager = remote.require './lib/window'
 
+# i18n configure
+i18n = new (require 'i18n-2')
+  locales: ['en-US', 'ja-JP', 'zh-CN', 'zh-TW'],
+  defaultLocale: 'zh-CN',
+  directory: path.join(__dirname, 'asset', 'i18n'),
+  updateFiles: false,
+  indent: '\t',
+  extension: '.json',
+  devMode: false
+i18n.setLocale(window.language)
+__ = i18n.__.bind(i18n)
+
 window.sunshineWindow = null
 initialSunshineWindow = ->
   window.sunshineWindow = windowManager.createWindow
@@ -9,10 +21,12 @@ initialSunshineWindow = ->
     width: 820
     height: 650
   window.sunshineWindow.loadUrl "file://#{__dirname}/index.html"
-  if process.env.DEBUG?
-    window.sunshineWindow.openDevTools
-      detach: true
-initialSunshineWindow()
+  # if process.env.DEBUG?
+  #   window.sunshineWindow.openDevTools
+  #     detach: true
+
+if config.get('plugin.Sunshine.enable', true)
+  initialAkashicRecordsWindow()
 
 module.exports =
   name: 'Sunshine'

@@ -1,4 +1,4 @@
-{React, ReactBootstrap, $, ROOT, APPDATA_PATH} = window
+{React, ReactDOM, ReactBootstrap, $, ROOT, APPDATA_PATH} = window
 {TabbedArea, TabPane, Grid, Row, Col, Input} = ReactBootstrap
 
 HeadquartersInfo = require './headquartersInfo'
@@ -46,4 +46,4 @@ SunshineArea = React.createClass
       </TabbedArea>
     </div>
 
-React.render <SunshineArea />, $('sunshine')
+ReactDOM.render <SunshineArea />, $('sunshine')
