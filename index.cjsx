@@ -19,7 +19,7 @@ module.exports =
   priority: 100
   displayName: [<FontAwesome key={0} name='sun-o' />, ' 花式晒人']
   description: '晒人用插件'
-  author: 'W.G.'
+  author: 'Jennings Wu.'
   link: 'https://github.com/JenningsWu'
   version: '0.0.1'
   handleClick: ->
