@@ -12,16 +12,17 @@ body {
 sunshine {
   /*margin: 10px*/
 }
-sunshine nav ul {
+
+sunshine .nav {
   display: flex;
 }
-sunshine nav ul li {
+sunshine .nav li {
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-sunshine nav ul li a {
+sunshine .nav li a {
   text-align: center;
 }
 

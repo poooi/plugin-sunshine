@@ -1,5 +1,5 @@
 {React, ReactDOM, ReactBootstrap, $, ROOT, APPDATA_PATH} = window
-{TabbedArea, TabPane, Grid, Row, Col, Input} = ReactBootstrap
+{Tabs, Tab, Grid, Row, Col, Input} = ReactBootstrap
 
 HeadquartersInfo = require './headquartersInfo'
 
@@ -15,11 +15,11 @@ SunshineArea = React.createClass
       selectedType: @refs.type.getValue()
   render: ->
     <div>
-      <TabbedArea activeKey={@state.selectedKey} animation={false} onSelect={@handleSelectTab}>
-        <TabPane eventKey={0} tab='提督司令部' >
+      <Tabs activeKey={@state.selectedKey} animation={false} onSelect={@handleSelectTab}>
+        <Tab eventKey={0} title='提督司令部' >
           <HeadquartersInfo />
-        </TabPane>
-        <TabPane eventKey={1} tab='相关图表' >
+        </Tab>
+        <Tab eventKey={1} title='相关图表' >
           <Grid>
             <Row className='vertical-center'>
               <Col xs={2} className='text-center'>
@@ -42,8 +42,8 @@ SunshineArea = React.createClass
               </Col>
             </Row>
           </Grid>
-        </TabPane>
-      </TabbedArea>
+        </Tab>
+      </Tabs>
     </div>
 
 ReactDOM.render <SunshineArea />, $('sunshine')

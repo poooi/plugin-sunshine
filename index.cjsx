@@ -1,5 +1,6 @@
 remote = require 'remote'
 windowManager = remote.require './lib/window'
+path = require 'path-extra'
 
 # i18n configure
 i18n = new (require 'i18n-2')
@@ -20,13 +21,14 @@ initialSunshineWindow = ->
     y: config.get 'poi.window.y', 0
     width: 820
     height: 650
+    realClose: true
   window.sunshineWindow.loadUrl "file://#{__dirname}/index.html"
   # if process.env.DEBUG?
   #   window.sunshineWindow.openDevTools
   #     detach: true
 
-if config.get('plugin.Sunshine.enable', true)
-  initialAkashicRecordsWindow()
+# if config.get('plugin.Sunshine.enable', true)
+#   initialSunshineWindow()
 
 module.exports =
   name: 'Sunshine'
@@ -37,4 +39,8 @@ module.exports =
   link: 'https://github.com/JenningsWu'
   version: '0.0.1'
   handleClick: ->
+    # window.sunshineWindow.show()
+    initialSunshineWindow()
+    window.sunshineWindow.openDevTools
+      detach: true
     window.sunshineWindow.show()
